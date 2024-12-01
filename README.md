@@ -1,3 +1,23 @@
+> [На русском](reports/README_ru.md)
+
+> ## Authored by: g.mano
+>
+> Date: 29.11.2024
+> [Portfolio](https://giftmano.web.app/)
+
+# AI Security - Data Poisoning Attacks in ML Models
+
+## Topic: Data Poisoning Attacks in Machine Learning Models
+
+- **Aim**: This coursework aims to analyse and demonstrate the vulnerability of machine learning models to **data poisoning attacks**. These attacks involve the injection of malicious data into the training set in order to degrade the performance of the model or mislead its predictions. Specifically, this work investigates **data poisoning** as an attack vector for **spam classification models** and examines the impact on model performance.
+
+## Introduction
+
+**Overview**:  
+ Machine learning models are widely deployed in critical applications such as spam detection, financial forecasting, and medical diagnosis. As these models are trusted to make important decisions, they also become targets for adversarial attacks. **Data poisoning attacks** are among the most insidious forms of adversarial manipulation, where attackers inject corrupted data into the training set to manipulate the model’s behavior.
+
+In this coursework, we use the **Spambase dataset**, a common benchmark dataset for spam classification, to simulate and evaluate **data poisoning attacks**. Specifically,we investigate **label flipping** (where spam emails are mislabelled as non-spam) and **targeted attacks** (where attackers craft specific emails to evade spam detection). The aim is to understand the impact of such attacks on machine learning models and to explore effective defence strategies.
+
 # Results
 
 This section presents the results of our experiments on the **Spam Classifier** model across three different scenarios: **Clean Classifier**, **Simple Poisoned Attack**, and **Targeted Poisoned Attack**. For each scenario, we evaluate model performance using key metrics such as accuracy, precision, recall, and F1-score for both classes (Ham and Spam). The following tables summarize the results for these three models.
@@ -66,8 +86,8 @@ The classification report provides a breakdown of precision, recall, and F1-scor
 
 ## Conclusion
 
-The results clearly show the detrimental impact of data poisoning attacks on the spam classifier model. The **Clean Model** performs significantly better, with high accuracy, precision, and recall across both classes. However, both the **Simple Poisoned Model** and **Targeted Poisoned Model** suffer a noticeable decline in performance.
+The results clearly demonstrate the detrimental effect of data poisoning attacks on the spam classifier model. The **Clean Model** shows strong performance, with high accuracy, precision and recall for both spam and ham classes. In contrast, the **Simple Poisoned Model** shows a significant drop in performance, highlighting the vulnerabilities introduced by poisoned data. The **Targeted Poisoned Model**, while improving accuracy, still exhibits detectable weaknesses as the targeted data points become increasingly concentrated, making the attack detectable by PAC (Probabilistic Adversarial Classifier).
 
-The **Targeted Poisoned Attack** demonstrates how an attacker can manipulate the model to misclassify spam emails as ham, bypassing the spam detection mechanism. These results highlight the importance of defending against such attacks to maintain the integrity and reliability of machine learning models.
+The **Targeted Poisoned Attack** highlights the potential for attackers to manipulate the model to misclassify spam as ham, effectively bypassing the detection mechanism. This manipulation results in near perfect confidence levels, close to 100%, for the misclassified instances. These findings underscore the critical need for robust defences against data poisoning attacks to preserve the integrity, accuracy and reliability of machine learning models in real-world applications.
 
 ---
